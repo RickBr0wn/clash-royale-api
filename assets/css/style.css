@@ -1,0 +1,62 @@
+body{
+    margin: 0 auto;
+    padding: 0px;
+    background-color: transparent;
+}
+
+html { 
+    background: url("../images/Clash-royale-banner.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+.text-muted{
+    font-size: 12px;
+    width: 250px;
+    padding: 3px 10px;
+}
+
+.myButton{
+    border-radius: 3px;
+    border: none;
+    padding: 2px 20px;
+}
+
+h1{
+    margin-bottom: 20px;    
+}
+
+.textBar{
+    background-color: black;
+    padding: 20px 100px;
+    border-radius: 10px; 
+}
+
+.emptySpace{
+    height: 20px;
+}
+
+#chestCycle{
+    text-align: center;
+}
+
+#chestCycle{
+    text-align: center;
+}
+
+.center{
+    text-align: center;
+}
+
+#currentDeck{
+    height: 200px;
+}
+
+.row{
+    margin-top: 500px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: transparent
+}
