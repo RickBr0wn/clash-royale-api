@@ -1,12 +1,20 @@
 $(document).ready(function(){
     console.log(api_key);
       $('#buttonSubmit').click(function(){
+        
+        let hidden = document.getElementById('hidden');
+        if(hidden.style.display === "none"){
+          hidden.style.display = "block";
+        }else{
+          hidden.style.display = "none";
+        }
+
         // let playerTag = $('#tagInput').val();
         let playerTag = "RYULJJJJ";
         let settings = {
             "async": true,
             "crossDomain": true,
-            "url": "http://api.cr-api.com/player/" + playerTag,
+            "url": "https://api.cr-api.com/player/" + playerTag,
             "method": "GET",
             "headers": {
               "auth": api_key
