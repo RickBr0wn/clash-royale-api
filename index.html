@@ -6,42 +6,49 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Clash Royale API</title>
     <!-- Google Fonts Here -->
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css"><!-- CTRL Click Here -->
 </head>
 <body>
     <div class="row">
         <div class="container-fluid">
-            <div class="col-md-12 padding-0 textBar">
-                <!-- <img src="assets/images/Clash-royale-banner.jpg"> -->
-                <div id="buttonHolder">
-                    <input type="text" name="textBox" id="tagInput" class="text-muted" placeholder="Please a playertag. Do not include the #">
-                    <button type="submit" id="buttonSubmit" class="btn-primary myButton">Submit</button>
-                </div>
-            </div>    
+            <img class="logo" src="https://vignette.wikia.nocookie.net/clashroyale/images/6/6c/Clash_Royale_Logo.png/revision/latest?cb=20160104193540" alt="" srcset="">
         </div>
     </div>
 
-    <div id="hidden">
-        <div class="row playerDetails">
-            <div id="nameHolder" class="col-md-4 center"></div>
-            <div id="trophiesHolder" class="col-md-4 center"></div>
-            <div id="arenaHolder" class="col-md-4 center"></div>
+    <div class="row">
+        <div class="container input-holder">
+            <input type="text" name="playerTagInput" id="playerTagInput" class="text-muted" placeholder="Please a playertag. Do not include the '#'">
+            <a id="buttonSubmit"><img src="https://vignette.wikia.nocookie.net/clashroyale/images/6/60/BattleButton.png/revision/latest?cb=20160314183829" alt="" srcset="" width="150" height="75"></a>
+        </div>
+    </div>
+
+    <div class="textBacking">
+        <div class="row">
+            <div id="nameHolder" class="col-md-4"></div>
+            <div id="trophiesHolder" class="col-md-4"></div>
+            <div id="arenaHolder" class="col-md-4"></div>
         </div>
 
-        <div class="emptySpace"></div>
-        <div class="emptySpace"></div>
-        <div class="emptySpace"></div>
+        <div class="row">
+            <div id="currentDeck" class="col-md-12"></div>
+        </div>
 
-        <div id="currentDeck"></div>
-
-        <div id="chestCycle">
-            <div id="cycleTitle"></div>
-            <div id="epicCycle"></div>
-            <div id="giantCycle"></div>
-            <div id="magicalCycle"></div>
-            <div id="superMagicalCycle"></div>
-            <div id="legendaryCycle"></div>
+        <div class="row">
+            <div id="chestCycle" class="col-md-12">
+                <div id="cycleTitle"></div>
+                <div class="row large">    
+                    <div id="epicCycle" class="col-md-4"></div>
+                    <div id="giantCycle" class="col-md-4"></div>
+                    <div id="magicalCycle" class="col-md-4"></div>
+                </div>
+                
+                <div class="row">
+                    <div id="superMagicalCycle" class="col-md-6"></div>
+                    <div id="legendaryCycle" class="col-md-6"></div>
+                </div>
+            </div>
         </div>
     </div>
 
