@@ -2,16 +2,20 @@ body{
     margin: 0 auto;
     padding: 0px;
     background-color: transparent;
+    max-width: 1024px;
+    font-family: 'Bangers', cursive;
+    font-size: 32px;
+    color: white;
 }
 
 html { 
-    background: url("../images/Clash-royale-banner.jpg") no-repeat center center fixed; 
+    background: url("../images/CRBackground.png") no-repeat center center; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
   }
-
+  
 .text-muted{
     font-size: 12px;
     width: 250px;
@@ -22,41 +26,55 @@ html {
     border-radius: 3px;
     border: none;
     padding: 2px 20px;
+    font-size: 16px;
+}
+
+hr{
+    width: 100%;
 }
 
 h1{
     margin-bottom: 20px;    
 }
 
-.textBar{
-    background-color: black;
-    padding: 20px 100px;
-    border-radius: 10px; 
-}
-
-.emptySpace{
-    height: 20px;
-}
-
-#chestCycle{
+.textBacking{
+    margin-top: 50px;
+    /* border-radius: 10px; */
+    width: 100%;
     text-align: center;
 }
 
-#chestCycle{
-    text-align: center;
+currentDeck{
+    max-width: 50%;
 }
 
-.center{
-    text-align: center;
+#currentDeck img{
+    height: 250px;
 }
 
-#currentDeck{
-    height: 200px;
+.logo{
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+	display: block;
+}
+
+.input-holder{
+    max-width: 1024px;;
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.input-holder input{
+    border-radius: 10px;
+    font-family: 'Bangers', cursive;
+    font-size: 32px;
+    width: 78%;
 }
 
 .row{
-    margin-top: 500px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: transparent
+    margin-top: 50px;
 }
