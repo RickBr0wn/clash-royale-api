@@ -1,45 +1,52 @@
 $(document).ready(function(){
-    console.log(api_key);
-      $('#buttonSubmit').click(function(){
-        
-        let hidden = document.getElementById('hidden');
-        if(hidden.style.display === "none"){
-          hidden.style.display = "block";
-        }else{
-          hidden.style.display = "none";
+  $('#buttonSubmit').click(function(){
+
+    // let playerTag = $('#tagInput').val();
+    // let playerTag = "RYULJJJJ"; // To be corrected after TESTING
+    let playerTag = "RYCGGPLY"; // To be corrected after TESTING
+    let settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://api.cr-api.com/player/" + playerTag,
+        "method": "GET",
+        "headers": {
+          "auth": api_key
         }
+      }
 
-        // let playerTag = $('#tagInput').val();
-        let playerTag = "RYULJJJJ";
-        let settings = {
-            "async": true,
-            "crossDomain": true,
-            "url": "https://api.cr-api.com/player/" + playerTag,
-            "method": "GET",
-            "headers": {
-              "auth": api_key
-            }
-          }
+    if(playerTag === ""){
+      alert('Please enter a clantag!!');
+    }     
 
-        if(playerTag === ""){
-          alert('Please enter a clantag!!');
-        }     
+    $.ajax(settings).done(function (response) {
+      
+      console.log(response);
 
-        $.ajax(settings).done(function (response) {
-          console.log(response);
-          document.getElementById('nameHolder').innerHTML = "Name: " + response.name;
-          document.getElementById('trophiesHolder').innerHTML = "Trophies: " + response.trophies;
-          document.getElementById('arenaHolder').innerHTML = "Arena: " + response.arena.arena + " - " + response.arena.name;
+      let deck = [];
+      let epic = "<img src='assets/images/chests/chest-epic.png'>"
+      let giant = "<img src='assets/images/chests/chest-giant.png'>"
+      let magical = "<img src='assets/images/chests/chest-magical.png'>"
+      let supermagical = "<img src='assets/images/chests/chest-supermagical.png'>"
+      let legendary = "<img src='assets/images/chests/chest-legendary.png'>"
 
-          $('#currentDeck').css("background-color: ", "yellow");
-          // "url(" + response.currentDeck[0].icon + ")");
+      document.getElementById('nameHolder').innerHTML = "Name: " + "</br>" + response.name;
+      document.getElementById('trophiesHolder').innerHTML = "Trophies: " + "</br>" + response.trophies;
+      document.getElementById('arenaHolder').innerHTML = response.arena.arena + "</br>" + response.arena.name;
 
-          document.getElementById('cycleTitle').innerHTML = "The following numbers are the number of <strong>free</strong> chests that need to be won before you are awarded the appropiate chest.";
-          document.getElementById('epicCycle').innerHTML = "Epic Chest: " + response.chestCycle.epic;
-          document.getElementById('giantCycle').innerHTML = "Giant Chest: " + response.chestCycle.giant;
-          document.getElementById('magicalCycle').innerHTML = "Magical Chest: " + response.chestCycle.magical;
-          document.getElementById('superMagicalCycle').innerHTML = "Super Magical Chest: " + response.chestCycle.superMagical;
-          document.getElementById('legendaryCycle').innerHTML = "Legendary Chest: " + response.chestCycle.legendary;
-        });
-      });
+      for(let i = 0; i < response.currentDeck.length; i++){
+        deck += "<img src='" + response.currentDeck[i].icon + "'>";
+      }
+
+      document.getElementById('currentDeck').innerHTML = "Current Deck: </br>" + deck;
+
+      document.getElementById('cycleTitle').innerHTML = "Chest Cycle: </br>The following numbers are the number of <strong>free</strong> chests that need to be won before you are awarded the appropiate chest:";
+
+      document.getElementById('epicCycle').innerHTML = epic + ": " + response.chestCycle.epic;
+      
+      document.getElementById('giantCycle').innerHTML = giant + ": " + response.chestCycle.giant;
+      document.getElementById('magicalCycle').innerHTML = magical + ": " + response.chestCycle.magical;
+      document.getElementById('superMagicalCycle').innerHTML = supermagical + ": " + response.chestCycle.superMagical;
+      document.getElementById('legendaryCycle').innerHTML = legendary + ": " + response.chestCycle.legendary;
+    });
+  });
 });
