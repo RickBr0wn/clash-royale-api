@@ -1,9 +1,9 @@
 $(document).ready(function(){
   $('#buttonSubmit').click(function(){
 
-    // let playerTag = $('#tagInput').val();
+    let playerTag = $('#tagInput').val();
     // let playerTag = "RYULJJJJ"; // To be corrected after TESTING
-    let playerTag = "RYCGGPLY"; // To be corrected after TESTING
+    // let playerTag = "RYCGGPLY"; // To be corrected after TESTING
     let settings = {
         "async": true,
         "crossDomain": true,
