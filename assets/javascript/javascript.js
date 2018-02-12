@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $('#buttonSubmit').click(function(){
 
-    let playerTag = $('#tagInput').val();
+    let playerTag = $('#playerTagInput').val();
     // let playerTag = "RYULJJJJ"; // To be corrected after TESTING
     // let playerTag = "RYCGGPLY"; // To be corrected after TESTING
     let settings = {
@@ -14,7 +14,9 @@ $(document).ready(function(){
         }
       }
 
-    if(playerTag === ""){
+    console.log(settings.url);
+
+    if(playerTag === " "){
       alert('Please enter a clantag!!');
     }     
 
