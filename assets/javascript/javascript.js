@@ -5,8 +5,8 @@ let answer = [];
 $(document).ready(function(){
   $('#buttonSubmit').click(function(){
 
-    let playerTag = $('#playerTagInput').val();
-    // let playerTag = "RYULJJJJ"; // To be corrected after TESTING
+    // let playerTag = $('#playerTagInput').val();
+    let playerTag = "RYULJJJJ"; // To be corrected after TESTING
     // let playerTag = "RYCGGPLY"; // To be corrected after TESTING
     let settings = {
         "async": true,
@@ -38,7 +38,7 @@ $(document).ready(function(){
 
       document.getElementById('currentDeck').innerHTML = "Current Deck: </br>" + deck;
 
-      document.getElementById('cycleTitle').innerHTML = "Chest Cycle: </br>The following numbers are the number of <strong>free</strong> chests that need to be won before you are awarded the appropiate chest:";
+      document.getElementById('cycleTitle').innerHTML = "Chest Cycle: </br>The following numbers are the number of <strong>free</strong> chests that need to be won before you are awarded it:";
 
       document.getElementById('epicCycle').innerHTML = epic + ": " + response.chestCycle.epic;
       
@@ -50,7 +50,7 @@ $(document).ready(function(){
       assignChestImage(response.chestCycle.upcoming);
       console.log(answer);
       
-      document.getElementById('nexts').innerHTML = "And these are the next 8 free chests you will recieve: ";
+      document.getElementById('nexts').innerHTML = "And this the order of your next 8 free chests: ";
       document.getElementById('next1').innerHTML = answer[0]; 
       document.getElementById('next2').innerHTML = answer[1];
       document.getElementById('next3').innerHTML = answer[2];
