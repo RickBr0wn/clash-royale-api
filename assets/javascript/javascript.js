@@ -5,8 +5,8 @@ let answer = [];
 $(document).ready(function(){
   $('#buttonSubmit').click(function(){
 
-    // let playerTag = $('#playerTagInput').val();
-    let playerTag = "RYULJJJJ"; // To be corrected after TESTING
+    let playerTag = $('#playerTagInput').val();
+    // let playerTag = "RYULJJJJ"; // To be corrected after TESTING
     // let playerTag = "RYCGGPLY"; // To be corrected after TESTING
     let settings = {
         "async": true,
@@ -30,7 +30,7 @@ $(document).ready(function(){
 
       document.getElementById('nameHolder').innerHTML = "Name: " + "</br>" + response.name;
       document.getElementById('trophiesHolder').innerHTML = "Trophies: " + "</br>" + response.trophies;
-      document.getElementById('arenaHolder').innerHTML = response.arena.arena + "</br>" + response.arena.name;
+      document.getElementById('arenaHolder').innerHTML = response.arena.arena  + ":" + "</br>" + response.arena.name;
 
       for(let i = 0; i < response.currentDeck.length; i++){
         deck += "<img src='" + response.currentDeck[i].icon + "'>";
