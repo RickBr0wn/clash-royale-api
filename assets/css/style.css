@@ -4,7 +4,7 @@ body{
     background-color: transparent;
     max-width: 1024px;
     font-family: 'Bangers', cursive;
-    font-size: 32px;
+    font-size: 40px;
     color: white;
 }
 
@@ -46,6 +46,7 @@ h1{
 
 currentDeck{
     max-width: 50%;
+
 }
 
 #currentDeck img{
@@ -57,7 +58,8 @@ currentDeck{
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
-	display: block;
+    display: block;
+    height: 200px;
 }
 
 .input-holder{
@@ -79,3 +81,12 @@ currentDeck{
     margin-top: 50px;
 }
 
+#nexts{
+    margin-top: 50px;
+    margin-bottom: -25px;
+}
+
+.nextImages img{
+    height: 78px;
+    margin-bottom: 100px;
+}
