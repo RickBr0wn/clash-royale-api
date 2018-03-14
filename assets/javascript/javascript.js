@@ -29,6 +29,7 @@ $(document).ready(function(){
       console.log(response);
 
       document.getElementById('nameHolder').innerHTML = "Name: " + "</br>" + response.name;
+      document.getElementById('clanHolder').innerHTML = "Clan: " + "</br>" + response.clan.name;
       document.getElementById('trophiesHolder').innerHTML = "Trophies: " + "</br>" + response.trophies;
       document.getElementById('arenaHolder').innerHTML = response.arena.arena  + ":" + "</br>" + response.arena.name;
 
